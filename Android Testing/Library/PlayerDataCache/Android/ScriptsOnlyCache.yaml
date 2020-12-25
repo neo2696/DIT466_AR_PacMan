@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - ImageTracker
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.Timeline.Editor.dll:
@@ -17,6 +19,11 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARPoseDriver
     - UnityEngine.XR.ARFoundation.ARSession
     - UnityEngine.XR.ARFoundation.ARSessionOrigin
+    - UnityEngine.XR.ARFoundation.ARTrackedImageManager
+    Unity.XR.ARSubsystems.Editor.dll:
+    - UnityEditor.XR.ARSubsystems.XRReferenceImageLibraryEditor
+    Unity.XR.ARSubsystems.dll:
+    - UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
@@ -36,9 +43,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -47,20 +62,28 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 2242}
+      Script: {instanceID: 2244}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2328}
     - Class: 114
       Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 3192}
+      Script: {instanceID: 2862}
     - Class: 114
-      Script: {instanceID: 3234}
+      Script: {instanceID: 3196}
     - Class: 114
-      Script: {instanceID: 3444}
+      Script: {instanceID: 3238}
+    - Class: 114
+      Script: {instanceID: 3448}
+    - Class: 114
+      Script: {instanceID: 3718}
+    - Class: 114
+      Script: {instanceID: 4012}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -249,6 +272,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARTrackedObject
+  - hash:
+      serializedVersion: 2
+      Hash: bd56c4980926e94e6c3526b9784c19e1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ImageTracker
   - hash:
       serializedVersion: 2
       Hash: fe64a45214940b510a0ec79c96d43498
