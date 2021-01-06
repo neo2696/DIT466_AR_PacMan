@@ -8,14 +8,31 @@ public class ImageTracker : MonoBehaviour
 {
     ARTrackedImageManager imgtracker;
 
-    public GameObject point;
-    public Dictionary<string, GameObject> myPoints;
-
+    public GameObject parentPrefab;
     public GameObject pacMan;
-    private void Awake()
+    int countp ;
+    private ARRaycastManager rays;
+    public Camera myCamera;
+    private ARAnchorManager anc;
+    private ARPlaneManager plan;
+    private static ILogger logger = Debug.unityLogger;
+    bool PacmanExists;
+    private void Start()
     {
         imgtracker = GetComponent<ARTrackedImageManager>();
-        myPoints = new Dictionary<string, GameObject>();
+        myCamera = this.gameObject.transform.Find("AR Camera").gameObject.GetComponent<Camera>();
+        rays = this.gameObject.GetComponent<ARRaycastManager>();
+        anc = this.gameObject.GetComponent<ARAnchorManager>();
+        plan = this.gameObject.GetComponent<ARPlaneManager>();
+
+    }
+
+    private void Update()
+    {
+        if(countp == 1 && PacmanExists == false)
+        {
+            doSpawnPacMan();
+        }
     }
 
     private void OnEnable()
@@ -38,37 +55,87 @@ public class ImageTracker : MonoBehaviour
         foreach (ARTrackedImage img in eventArgs.updated)
         {
             handleTracking(img);
+
         }
     }
 
     void handleTracking(ARTrackedImage img)
     {
-        GameObject p;
-        GameObject player;
+        GameObject parentP;
         string key;
+        
         if (img.trackingState == TrackingState.None)
         {
             return;
         }
         key = img.referenceImage.name;
-
-        img.transform.Translate(0, 0, 0);
-
-        if (!myPoints.ContainsKey(key))
+        
+        if (key == "Board" && countp < 1)
         {
-            p = Instantiate(point, img.transform.position, img.transform.rotation);
-            p.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-            p.transform.parent = img.transform;
-            myPoints[key] = p;
+            img.transform.Translate(0, 0, 0);
+            parentP = Instantiate(parentPrefab, img.transform.position, img.transform.rotation);
+            parentP.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+            parentP.transform.parent = img.transform;
+            countp++;
         }
 
-        if (key == "PacManSpawn")
-        {
-            player = Instantiate(pacMan, img.transform.position, img.transform.rotation);
-            player.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
-            player.transform.parent = img.transform;
-        }
+
+        /* if (!myPoints.ContainsKey(key))
+         {
+             p = Instantiate(point, img.transform.position, img.transform.rotation);
+             p.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+             p.transform.parent = img.transform;
+             myPoints[key] = p;
+         }
+        */
 
         Debug.Log("Found an Image: " + img.referenceImage.name + "(" + img.trackingState + ")");
+    }
+
+    public void doSpawnPacMan()
+    {
+        GameObject player;
+        Vector3 screenCenter;
+        bool hit;
+        ARRaycastHit nearest;
+        List<ARRaycastHit> myHits = new List<ARRaycastHit>();
+        ARPlane plane;
+        ARAnchor point;
+
+        screenCenter = myCamera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+
+        hit = rays.Raycast(screenCenter,
+            myHits,
+            TrackableType.FeaturePoint | TrackableType.PlaneWithinPolygon);
+
+        logger.Log("Hit: " + hit);
+
+        if (hit == true)
+        {
+            nearest = myHits[0];
+            player = Instantiate(pacMan, nearest.pose.position + nearest.pose.up * 0.1f, nearest.pose.rotation);
+
+            player.transform.localScale = new Vector3(3, 3, 3);
+            player.tag = "PacMan";
+
+            logger.Log("spawned at " + player.transform.position.x + ", " + player.transform.position.y + ", " + player.transform.position.z);
+
+            plane = plan.GetPlane(nearest.trackableId);
+
+            if (plane != null)
+            {
+                point = anc.AttachAnchor(plane, nearest.pose);
+                logger.Log("Added an anchor to a plane " + nearest);
+            }
+            else
+            {
+                point = anc.AddAnchor(nearest.pose);
+                logger.Log("Added another anchor " + nearest);
+
+            }
+
+            player.transform.parent = point.transform;
+            PacmanExists = true;
+        }
     }
 }
