@@ -2,7 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ImageTracker
-    - Movement
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.XR.ARCore.Editor.dll:
@@ -75,51 +74,49 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1446}
-    - Class: 114
       Script: {instanceID: 1448}
     - Class: 114
-      Script: {instanceID: 1478}
+      Script: {instanceID: 1450}
     - Class: 114
-      Script: {instanceID: 1500}
+      Script: {instanceID: 1482}
     - Class: 114
-      Script: {instanceID: 1580}
+      Script: {instanceID: 1504}
     - Class: 114
-      Script: {instanceID: 1952}
+      Script: {instanceID: 1584}
     - Class: 114
-      Script: {instanceID: 2228}
+      Script: {instanceID: 1956}
     - Class: 114
-      Script: {instanceID: 2254}
+      Script: {instanceID: 2232}
     - Class: 114
-      Script: {instanceID: 2326}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2338}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 2632}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2870}
+      Script: {instanceID: 2636}
     - Class: 114
       Script: {instanceID: 2874}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2878}
     - Class: 114
-      Script: {instanceID: 3028}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 3214}
+      Script: {instanceID: 3218}
     - Class: 114
-      Script: {instanceID: 3238}
+      Script: {instanceID: 3242}
     - Class: 114
-      Script: {instanceID: 3256}
+      Script: {instanceID: 3260}
     - Class: 114
-      Script: {instanceID: 3466}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 3738}
+      Script: {instanceID: 3740}
     - Class: 114
-      Script: {instanceID: 3850}
+      Script: {instanceID: 3852}
     - Class: 114
-      Script: {instanceID: 3988}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 4040}
+      Script: {instanceID: 4042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120

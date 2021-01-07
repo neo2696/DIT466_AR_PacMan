@@ -10,16 +10,28 @@ public class ImageTracker : MonoBehaviour
 
     public GameObject parentPrefab;
     public GameObject pacMan;
+    public Dictionary<string, GameObject> myParent;
     int countp ;
     private ARRaycastManager rays;
     public Camera myCamera;
     private ARAnchorManager anc;
     private ARPlaneManager plan;
     private static ILogger logger = Debug.unityLogger;
-    bool PacmanExists;
-    private void Start()
+    bool isPacMan;
+
+    private bool left, right, up, down;
+
+    private Rigidbody rb;
+    private Collider col;
+
+    private void Awake()
     {
         imgtracker = GetComponent<ARTrackedImageManager>();
+    }
+
+    private void Start()
+    {
+
         myCamera = this.gameObject.transform.Find("AR Camera").gameObject.GetComponent<Camera>();
         rays = this.gameObject.GetComponent<ARRaycastManager>();
         anc = this.gameObject.GetComponent<ARAnchorManager>();
@@ -29,7 +41,26 @@ public class ImageTracker : MonoBehaviour
 
     private void Update()
     {
-        if(countp == 1 && PacmanExists == false)
+        if (left)
+        {
+            rb.AddForce(Vector3.left ,ForceMode.Force);
+        }
+
+        else if (right)
+        {
+            rb.AddForce(Vector3.right,ForceMode.Force);
+        }
+
+        else if (up)
+        {
+            rb.AddForce(Vector3.forward, ForceMode.Force);
+        }
+
+        else if (down)
+        {
+            rb.AddForce(Vector3.back, ForceMode.Force);
+        }
+        else if(Input.touchCount == 2 && !isPacMan)
         {
             doSpawnPacMan();
         }
@@ -69,26 +100,15 @@ public class ImageTracker : MonoBehaviour
             return;
         }
         key = img.referenceImage.name;
-        
-        if (key == "Board" && countp < 1)
+       
+        if ( key == "Board" && countp < 1)
         {
-            img.transform.Translate(0, 0, 0);
+            img.transform.Translate(0.1f, 0, 0);
             parentP = Instantiate(parentPrefab, img.transform.position, img.transform.rotation);
             parentP.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
             parentP.transform.parent = img.transform;
             countp++;
         }
-
-
-        /* if (!myPoints.ContainsKey(key))
-         {
-             p = Instantiate(point, img.transform.position, img.transform.rotation);
-             p.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-             p.transform.parent = img.transform;
-             myPoints[key] = p;
-         }
-        */
-
         Debug.Log("Found an Image: " + img.referenceImage.name + "(" + img.trackingState + ")");
     }
 
@@ -115,13 +135,13 @@ public class ImageTracker : MonoBehaviour
             nearest = myHits[0];
             player = Instantiate(pacMan, nearest.pose.position + nearest.pose.up * 0.1f, nearest.pose.rotation);
 
-            player.transform.localScale = new Vector3(3, 3, 3);
-            player.tag = "PacMan";
+            player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            player.tag = "Player";
 
             logger.Log("spawned at " + player.transform.position.x + ", " + player.transform.position.y + ", " + player.transform.position.z);
 
             plane = plan.GetPlane(nearest.trackableId);
-
+            rb = player.GetComponent<Rigidbody>();
             if (plane != null)
             {
                 point = anc.AttachAnchor(plane, nearest.pose);
@@ -133,9 +153,50 @@ public class ImageTracker : MonoBehaviour
                 logger.Log("Added another anchor " + nearest);
 
             }
-
+            isPacMan = true;
             player.transform.parent = point.transform;
-            PacmanExists = true;
         }
     }
+    public void MoveLeft()
+    {
+        left = true;
+    }
+
+    public void StopMovingLeft()
+    {
+        left = false;
+    }
+
+    public void MoveRight()
+    {
+        right = true;
+    }
+
+    public void StopMovingRight()
+    {
+        right = false;
+    }
+
+    public void MoveUp()
+    {
+        up = true;
+    }
+
+    public void StopMovingUp()
+    {
+        up = false;
+    }
+
+    public void MoveDown()
+    {
+        down = true;
+    }
+
+    public void StopMovingDown()
+    {
+        down = false;
+    }
+
+
+
 }

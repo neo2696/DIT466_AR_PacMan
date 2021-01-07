@@ -421,8 +421,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: MoveDown
           m_Mode: 1
           m_Arguments:
@@ -437,8 +437,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: StopMovingDown
           m_Mode: 1
           m_Arguments:
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.42352945, g: 0.42352945, b: 0.42352945, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -925,7 +925,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1057453920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1867166269}
+        m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
+        m_MethodName: MoveLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1867166269}
+        m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
+        m_MethodName: StopMovingLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1057453920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,12 +1001,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: MoveLeft
           m_Mode: 1
           m_Arguments:
@@ -993,12 +1017,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 3
+  - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: StopMovingLeft
           m_Mode: 1
           m_Arguments:
@@ -1268,8 +1292,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: MoveRight
           m_Mode: 1
           m_Arguments:
@@ -1284,8 +1308,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: StopMovingRight
           m_Mode: 1
           m_Arguments:
@@ -1464,7 +1488,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867166264}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
@@ -1624,8 +1648,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: MoveUp
           m_Mode: 1
           m_Arguments:
@@ -1640,8 +1664,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        - m_Target: {fileID: 1867166269}
+          m_TargetAssemblyTypeName: ImageTracker, Assembly-CSharp
           m_MethodName: StopMovingUp
           m_Mode: 1
           m_Arguments:

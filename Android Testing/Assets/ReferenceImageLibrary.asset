@@ -16,16 +16,6 @@ MonoBehaviour:
   m_GuidHigh: 12784071935856170637
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 4764016398210650540
-      m_GuidHigh: 14547298370620996508
-    m_SerializedTextureGuid:
-      m_GuidLow: 4536460435317331073
-      m_GuidHigh: 2331909102117088185
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: PacManSpawn
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
       m_GuidLow: 4644396102109904536
       m_GuidHigh: 17258750045738988697
     m_SerializedTextureGuid:
