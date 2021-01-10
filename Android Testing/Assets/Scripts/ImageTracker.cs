@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
 
 public class ImageTracker : MonoBehaviour
 {
@@ -135,7 +136,7 @@ public class ImageTracker : MonoBehaviour
             nearest = myHits[0];
             player = Instantiate(pacMan, nearest.pose.position + nearest.pose.up * 0.1f, nearest.pose.rotation);
 
-            player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            player.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
             player.tag = "Player";
 
             logger.Log("spawned at " + player.transform.position.x + ", " + player.transform.position.y + ", " + player.transform.position.z);
@@ -197,6 +198,19 @@ public class ImageTracker : MonoBehaviour
         down = false;
     }
 
+    public void RespawnPacMan()
+    {
+        isPacMan = false;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(collision.CompareTag("Point"))
+        {
+            Destroy(collision.gameObject);
+        }
+  
+    }
 
 
 }

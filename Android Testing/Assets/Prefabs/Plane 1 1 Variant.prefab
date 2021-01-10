@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5867031628926089257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 200442011358441442, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 440339318463891593, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 595741690741440739, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 845432622098379461, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 976508116473383258, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 707.4972
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 676.0154
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -808.6181
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012439694119366790, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218648768243525681, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685742689429557712, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652751178413088074, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222489012518951017, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226277873463643078, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770275755482950110, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838258243128122077, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146090137564599012, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954448064478290800, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111163088474358578, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978994378443228206, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152964907805967845, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: Plane 1 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266421121665144678, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214370977782533742, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544566562221648239, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726100005977735653, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8786659036516460287, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838557291329482294, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Cube '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d093a3e6070fea54eaec884e59146aba, type: 3}
