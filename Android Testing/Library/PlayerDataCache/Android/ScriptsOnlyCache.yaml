@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CollisionDetection
     - ImageTracker
+    - Master
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.XR.ARCore.Editor.dll:
@@ -117,6 +119,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3986}
     - Class: 114
       Script: {instanceID: 4038}
+    - Class: 114
+      Script: {instanceID: 27088}
+    - Class: 114
+      Script: {instanceID: 27676}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -890,6 +896,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionDetection
+  - hash:
+      serializedVersion: 2
+      Hash: 3635d3185d27be9f656445b480628091
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Master
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

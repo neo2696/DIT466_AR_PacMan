@@ -19,12 +19,13 @@ public class ImageTracker : MonoBehaviour
     private ARPlaneManager plan;
     private static ILogger logger = Debug.unityLogger;
     bool isPacMan;
-
+    GameObject parentP;
     private bool left, right, up, down;
 
     private Rigidbody rb;
     private Collider col;
 
+    GameObject player;
     private void Awake()
     {
         imgtracker = GetComponent<ARTrackedImageManager>();
@@ -93,7 +94,7 @@ public class ImageTracker : MonoBehaviour
 
     void handleTracking(ARTrackedImage img)
     {
-        GameObject parentP;
+       // GameObject parentP;
         string key;
         
         if (img.trackingState == TrackingState.None)
@@ -143,6 +144,7 @@ public class ImageTracker : MonoBehaviour
 
             plane = plan.GetPlane(nearest.trackableId);
             rb = player.GetComponent<Rigidbody>();
+            col = player.GetComponent<Collider>();
             if (plane != null)
             {
                 point = anc.AttachAnchor(plane, nearest.pose);
@@ -201,15 +203,6 @@ public class ImageTracker : MonoBehaviour
     public void RespawnPacMan()
     {
         isPacMan = false;
-    }
-
-    private void OnTriggerEnter(Collider collision)
-    {
-        if(collision.CompareTag("Point"))
-        {
-            Destroy(collision.gameObject);
-        }
-  
     }
 
 

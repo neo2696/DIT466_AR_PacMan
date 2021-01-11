@@ -102,6 +102,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Cube '
       objectReference: {fileID: 0}
+    - target: {fileID: 3677363208828852582, guid: d093a3e6070fea54eaec884e59146aba,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4222489012518951017, guid: d093a3e6070fea54eaec884e59146aba,
         type: 3}
       propertyPath: m_Name
@@ -145,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 7152964907805967845, guid: d093a3e6070fea54eaec884e59146aba,
         type: 3}
       propertyPath: m_Name
-      value: Plane 1 1
+      value: Plane 1 1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7266421121665144678, guid: d093a3e6070fea54eaec884e59146aba,
         type: 3}
